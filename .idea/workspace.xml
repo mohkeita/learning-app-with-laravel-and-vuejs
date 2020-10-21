@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3593ef3d-39ef-4fdc-b1ce-916ba8699f40" name="Default Changelist" comment="" />
+    <list default="true" id="3593ef3d-39ef-4fdc-b1ce-916ba8699f40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/CourseFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/EpisodeFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_20_231225_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_20_231225_create_courses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_20_231516_create_episodes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_20_231516_create_episodes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +18,9 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -136,6 +147,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1jA3r7VEVk48rMlQfGSNZuBzZnt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -187,7 +199,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603233265361</updated>
-      <workItem from="1603233266513" duration="2081000" />
+      <workItem from="1603233266513" duration="4775000" />
     </task>
     <servers />
   </component>
@@ -195,6 +207,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="756" y="131" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603237631665">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="756" y="131" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.734@0.23.1280.734" timestamp="1603237631665" />
+    <state x="431" y="273" key="Github.ShareDialog" timestamp="1603235811986">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="431" y="273" key="Github.ShareDialog/0.23.1280.734@0.23.1280.734" timestamp="1603235811986" />
+    <state x="335" y="81" key="Github.UntrackedFilesDialog" timestamp="1603236298464">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="335" y="81" key="Github.UntrackedFilesDialog/0.23.1280.734@0.23.1280.734" timestamp="1603236298464" />
     <state width="1218" height="170" key="GridCell.Tab.0.bottom" timestamp="1603234983093">
       <screen x="0" y="23" width="1280" height="734" />
     </state>

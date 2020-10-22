@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3593ef3d-39ef-4fdc-b1ce-916ba8699f40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Courses/Show.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_095744_create_completions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Courses/ProgressButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Episode.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Courses/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Courses/Show.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Pages/Courses/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Courses/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -208,7 +208,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603233265361</updated>
-      <workItem from="1603233266513" duration="20560000" />
+      <workItem from="1603233266513" duration="33415000" />
     </task>
     <task id="LOCAL-00001" summary="implement course and episode factories migrations">
       <created>1603238583914</created>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603276539215</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implement show CourseController and Show episodes with vuejs">
+      <created>1603297863535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603297863535</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,17 +242,18 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="implement course and episode factories migrations" />
     <MESSAGE value="Show trainings with vuejs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show trainings with vuejs" />
+    <MESSAGE value="implement show CourseController and Show episodes with vuejs" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement show CourseController and Show episodes with vuejs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="756" y="131" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603237631665">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
     <state x="756" y="131" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.734@0.23.1280.734" timestamp="1603237631665" />
-    <state x="226" y="23" key="CommitChangelistDialog2" timestamp="1603276538942">
+    <state x="192" y="23" key="CommitChangelistDialog2" timestamp="1603297863232">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
-    <state x="226" y="23" key="CommitChangelistDialog2/0.23.1280.734@0.23.1280.734" timestamp="1603276538942" />
+    <state x="192" y="23" key="CommitChangelistDialog2/0.23.1280.734@0.23.1280.734" timestamp="1603297863232" />
     <state x="431" y="273" key="Github.ShareDialog" timestamp="1603235811986">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
@@ -254,29 +262,29 @@
       <screen x="0" y="23" width="1280" height="734" />
     </state>
     <state x="335" y="81" key="Github.UntrackedFilesDialog/0.23.1280.734@0.23.1280.734" timestamp="1603236298464" />
-    <state width="1218" height="170" key="GridCell.Tab.0.bottom" timestamp="1603294345310">
+    <state width="1218" height="170" key="GridCell.Tab.0.bottom" timestamp="1603399019465">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
-    <state width="1218" height="170" key="GridCell.Tab.0.bottom/0.23.1280.733@0.23.1280.733" timestamp="1603233544002" />
-    <state width="1218" height="170" key="GridCell.Tab.0.bottom/0.23.1280.734@0.23.1280.734" timestamp="1603294345310" />
-    <state width="1218" height="170" key="GridCell.Tab.0.center" timestamp="1603294345309">
+    <state width="1218" height="170" key="GridCell.Tab.0.bottom/0.23.1280.733@0.23.1280.733" timestamp="1603360602728" />
+    <state width="1218" height="170" key="GridCell.Tab.0.bottom/0.23.1280.734@0.23.1280.734" timestamp="1603399019465" />
+    <state width="1218" height="170" key="GridCell.Tab.0.center" timestamp="1603399019457">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
-    <state width="1218" height="170" key="GridCell.Tab.0.center/0.23.1280.733@0.23.1280.733" timestamp="1603233544001" />
-    <state width="1218" height="170" key="GridCell.Tab.0.center/0.23.1280.734@0.23.1280.734" timestamp="1603294345309" />
-    <state width="1218" height="170" key="GridCell.Tab.0.left" timestamp="1603294345308">
+    <state width="1218" height="170" key="GridCell.Tab.0.center/0.23.1280.733@0.23.1280.733" timestamp="1603360602726" />
+    <state width="1218" height="170" key="GridCell.Tab.0.center/0.23.1280.734@0.23.1280.734" timestamp="1603399019457" />
+    <state width="1218" height="170" key="GridCell.Tab.0.left" timestamp="1603399019451">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
-    <state width="1218" height="170" key="GridCell.Tab.0.left/0.23.1280.733@0.23.1280.733" timestamp="1603233544001" />
-    <state width="1218" height="170" key="GridCell.Tab.0.left/0.23.1280.734@0.23.1280.734" timestamp="1603294345308" />
-    <state width="1218" height="170" key="GridCell.Tab.0.right" timestamp="1603294345310">
+    <state width="1218" height="170" key="GridCell.Tab.0.left/0.23.1280.733@0.23.1280.733" timestamp="1603360602726" />
+    <state width="1218" height="170" key="GridCell.Tab.0.left/0.23.1280.734@0.23.1280.734" timestamp="1603399019451" />
+    <state width="1218" height="170" key="GridCell.Tab.0.right" timestamp="1603399019459">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
-    <state width="1218" height="170" key="GridCell.Tab.0.right/0.23.1280.733@0.23.1280.733" timestamp="1603233544002" />
-    <state width="1218" height="170" key="GridCell.Tab.0.right/0.23.1280.734@0.23.1280.734" timestamp="1603294345310" />
-    <state x="277" y="109" key="Vcs.Push.Dialog.v2" timestamp="1603276541671">
+    <state width="1218" height="170" key="GridCell.Tab.0.right/0.23.1280.733@0.23.1280.733" timestamp="1603360602727" />
+    <state width="1218" height="170" key="GridCell.Tab.0.right/0.23.1280.734@0.23.1280.734" timestamp="1603399019459" />
+    <state x="277" y="109" key="Vcs.Push.Dialog.v2" timestamp="1603297866702">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
-    <state x="277" y="109" key="Vcs.Push.Dialog.v2/0.23.1280.734@0.23.1280.734" timestamp="1603276541671" />
+    <state x="277" y="109" key="Vcs.Push.Dialog.v2/0.23.1280.734@0.23.1280.734" timestamp="1603297866702" />
   </component>
 </project>

@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCourseWithEpisodes;
 use App\Models\Course;
+use App\Models\Episode;
+use App\Youtube\YoutubeServices;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
 class CourseController extends Controller
@@ -25,6 +29,20 @@ class CourseController extends Controller
         return Inertia::render('Courses/index', [
             'courses' => $courses
         ]);
+    }
+
+    public function store(StoreCourseWithEpisodes $request, YoutubeServices $ytb)
+    {
+        $course = Course::create($request->all());
+
+        foreach($request->input('episodes') as $episode)
+        {
+            $episode['course_id'] = $course->id;
+            $episode['duration'] = $ytb->handleYoutubeVideoDuration($episode['video_url']);
+            Episode::create($episode);
+        }
+
+        return Redirect::route('courses.index')->with('success', 'Félicitations, votre formation a bien été postée.');
     }
 
     public function show(int $id) {

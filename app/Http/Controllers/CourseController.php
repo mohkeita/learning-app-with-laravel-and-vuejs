@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
-class CourseController extends Controller
-{
+class CourseController extends Controller {
+
     public function index() {
 
         $courses = Course::with('user')
@@ -31,6 +31,17 @@ class CourseController extends Controller
         ]);
     }
 
+    public function show(int $id)
+    {
+        $course = Course::where('id', $id)->with('episodes')->first();
+        $watched = auth()->user()->episodes;
+
+        return Inertia::render('Courses/Show', [
+            'course' => $course,
+            'watched' => $watched
+        ]);
+    }
+
     public function store(StoreCourseWithEpisodes $request, YoutubeServices $ytb)
     {
         $course = Course::create($request->all());
@@ -45,15 +56,31 @@ class CourseController extends Controller
         return Redirect::route('courses.index')->with('success', 'Félicitations, votre formation a bien été postée.');
     }
 
-    public function show(int $id) {
-
+    public function edit(int $id) {
         $course = Course::where('id', $id)->with('episodes')->first();
-        $watched = auth()->user()->episodes;
 
-        return Inertia::render('Courses/Show', [
-            'course' => $course,
-            'watched' => $watched
+        $this->authorize('update', $course);
+
+        return Inertia::render('Courses/Edit', [
+            'course' => $course
         ]);
+    }
+
+
+    public function update(StoreCourseWithEpisodes $request) {
+
+        $course = Course::where('id', $request->id)->first();
+        $this->authorize('update', $course);
+
+        $course->update($request->all());
+        $course->episodes()->delete();
+
+        foreach($request->episodes as $episode) {
+            $episode['course_id'] = $course->id;
+            Episode::create($episode);
+        }
+
+        return Redirect::route('courses.index')->with('success', 'Félicitations, votre formation a bien été modifiée.');
     }
 
     public function toggleProgress(Request $request) {

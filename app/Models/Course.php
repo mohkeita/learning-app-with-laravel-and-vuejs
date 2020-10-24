@@ -13,10 +13,16 @@ class Course extends Model
 
     protected $fillable = ['title', 'description', 'user_id'];
 
+    protected $appends = ['update'];
+
     protected static function booted() {
         static::creating(function ($course) {
             $course->user_id = auth()->id();
         });
+    }
+
+    public function getUpdateAttribute() {
+        return $this->can('update-course', $this);
     }
 
     public function episodes() {

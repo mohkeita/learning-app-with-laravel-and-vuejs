@@ -18,15 +18,19 @@ class CourseController extends Controller {
         $courses = Course::with('user')
             ->select('courses.*', DB::raw(
                 '(SELECT COUNT(DISTINCT(user_id))
-                FROM completions
-                INNER JOIN episodes ON completions.episode_id = episodes.id
-                WHERE episodes.course_id = courses.id
-                ) AS participants'
+            FROM completions
+            INNER JOIN episodes ON completions.episode_id = episodes.id
+            WHERE episodes.course_id = courses.id
+            ) AS participants'
+            ))->addSelect(DB::raw(
+                '(SELECT SUM(duration)
+            FROM episodes
+            WHERE episodes.course_id = courses.id
+            ) AS total_duration'
             ))
-            ->withCount('episodes')->latest()->get();
+            ->withCount('episodes')->latest()->paginate(5);
 
-
-        return Inertia::render('Courses/index', [
+        return Inertia::render('Courses/Index', [
             'courses' => $courses
         ]);
     }
